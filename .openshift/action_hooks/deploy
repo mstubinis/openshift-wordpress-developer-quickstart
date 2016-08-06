@@ -7,7 +7,6 @@ if [ ! -d ${OPENSHIFT_DATA_DIR}uploads ]; then
     echo "${OPENSHIFT_DATA_DIR}uploads not found, making it."
     mkdir ${OPENSHIFT_DATA_DIR}uploads
 fi
-
 # Add multisite upload dir
 if [ ! -d $OPENSHIFT_DATA_DIR/blogs.dir ]; then
     echo "$OPENSHIFT_DATA_DIR/blogs.dir not found, making it."
@@ -24,7 +23,6 @@ echo "symbolically linking ${OPENSHIFT_DATA_DIR}uploads -> ${OPENSHIFT_REPO_DIR}
 echo ""
 
 set -e
-
 if [ -z "$OPENSHIFT_MYSQL_DB_HOST" ]
 then
     echo 1>&2
@@ -33,12 +31,10 @@ then
     echo "then make a sample commit (add whitespace somewhere) and re-push" 1>&2
     echo 1>&2
 fi
-
 if [ -z "$OPENSHIFT_MYSQL_DB_HOST" ]
 then
     exit 5
 fi
-
 # Confirm database exists, if not create it
 if ! /usr/bin/mysql -u "$OPENSHIFT_MYSQL_DB_USERNAME" --password="$OPENSHIFT_MYSQL_DB_PASSWORD" -h "$OPENSHIFT_MYSQL_DB_HOST" -P "$OPENSHIFT_MYSQL_DB_PORT" -e "select * from wp_commentmeta;" "$OPENSHIFT_APP_NAME" > /dev/null 2>&1
 then
