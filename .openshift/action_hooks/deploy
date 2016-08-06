@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#set this variable value to something else if you plan on changing the subdirectory name. refer to the readme in the repo root directory
+#for more info
 sub_dir="blog"
 
 echo ""
