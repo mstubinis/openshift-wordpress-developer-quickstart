@@ -8,7 +8,7 @@ echo ""
 
 if [ ! -d ${OPENSHIFT_DATA_DIR}${sub_dir}/wp-content/themes/ ]; then
     echo "Pre-Stop hook - ${OPENSHIFT_DATA_DIR}${sub_dir}/wp-content/themes/ not found, making it."
-    mkdir ${OPENSHIFT_DATA_DIR}${sub_dir}/wp-content/themes/
+    mkdir -p ${OPENSHIFT_DATA_DIR}${sub_dir}/wp-content/themes/
 fi
 
 cp -fR ${OPENSHIFT_REPO_DIR}${sub_dir}/wp-content/themes/ ${OPENSHIFT_DATA_DIR}${sub_dir}/wp-content/themes/
