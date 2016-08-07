@@ -5,10 +5,10 @@
 sub_dir="blog"
 
 echo ""
-cp -fR ${OPENSHIFT_DATA_DIR}${sub_dir}/wp-content/themes/ ${OPENSHIFT_REPO_DIR}${sub_dir}/wp-content/themes/
+cp -fR ${OPENSHIFT_DATA_DIR}${sub_dir}/wp-content/themes/* ${OPENSHIFT_REPO_DIR}${sub_dir}/wp-content/themes
 echo "Pre-Build hook - copying files from ${OPENSHIFT_DATA_DIR}${sub_dir}/wp-content/themes/    TO    ${OPENSHIFT_REPO_DIR}${sub_dir}/wp-content/themes/"
 echo ""
 
-rm -rf ${OPENSHIFT_DATA_DIR}${sub_dir}/wp-content/themes/
+rm -rf ${OPENSHIFT_DATA_DIR}${sub_dir}/wp-content/themes
 echo "Post-Deploy hook - removing files from directory ${OPENSHIFT_DATA_DIR}${sub_dir}/wp-content/themes/"
 echo ""
