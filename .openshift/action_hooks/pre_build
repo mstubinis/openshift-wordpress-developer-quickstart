@@ -1,5 +1,9 @@
 #!/bin/bash
 
+#set this variable value to something else if you plan on changing the subdirectory name. refer to the readme in the repo root directory
+#for more info
+sub_dir="blog"
+
 echo ""
 cp -fR ${OPENSHIFT_REPO_DIR}${sub_dir}/wp-content/themes/ ${OPENSHIFT_DATA_DIR}${sub_dir}/wp-content/themes/
 echo "Pre-Build hook - copying files from ${OPENSHIFT_REPO_DIR}${sub_dir}/wp-content/themes/    TO    ${OPENSHIFT_DATA_DIR}${sub_dir}/wp-content/themes/"
