@@ -2,7 +2,7 @@
 This quickstart is designed to allow you to push themes, plugins, and WordPress upgrades to your OpenShift gear using git.  Please note that this is a one way relationship.  If you install any themes or plugins on your OpenShift WordPress site, the next time you do a git push they will be gone.  All theme & plugin installations, and WordPress core upgrades should be done on your local development environment.  Then do a git add, git commit, and git push to move the changes to your OpenShift gear.  This quickstart is geared towards developers, only use it if you know what you are doing!!!!
 
 Designed to have wordpress be installed in the subdirectory `/blog`
-You can change the subdirectory by renaming the blog folder and the sub_dir variable in `.openshift/action_hooks/deploy` to something else.
+You can change the subdirectory by renaming the blog folder and the sub_dir variable in each of the action hook scripts `(.openshift/action_hooks/*)` to something else.
 
 #### Installation on your OpenShift gear  
 Use the following command to launch an instance of this quickstart on OpenShift
