@@ -1,3 +1,6 @@
 #!/bin/bash
 
+echo ""
 cp -fR ${OPENSHIFT_REPO_DIR}${sub_dir}/wp-content/themes/ ${OPENSHIFT_DATA_DIR}${sub_dir}/wp-content/themes/
+echo "Pre-Build hook - copying files from ${OPENSHIFT_REPO_DIR}${sub_dir}/wp-content/themes/    TO    ${OPENSHIFT_DATA_DIR}${sub_dir}/wp-content/themes/"
+echo ""
