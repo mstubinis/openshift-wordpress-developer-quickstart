@@ -1,0 +1,3 @@
+#!/bin/bash
+
+cp -fR ${OPENSHIFT_REPO_DIR}${sub_dir}/wp-content/themes/ ${OPENSHIFT_DATA_DIR}${sub_dir}/wp-content/themes/
