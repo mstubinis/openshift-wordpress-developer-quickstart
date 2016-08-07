@@ -1,2 +1,4 @@
 blog/wp-content/uploads
 blog/wp-content/themes
+blog/wp-content/uploads/*
+blog/wp-content/themes/*
