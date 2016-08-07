@@ -1,3 +1,6 @@
 #!/bin/bash
 
+echo ""
 rm -rf ${OPENSHIFT_DATA_DIR}${sub_dir}/wp-content/themes/
+echo "Post-Deploy hook - removing files from directory ${OPENSHIFT_DATA_DIR}${sub_dir}/wp-content/themes/"
+echo ""
