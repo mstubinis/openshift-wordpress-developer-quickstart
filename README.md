@@ -1,13 +1,13 @@
 ### OpenShift WordPress Developer Quickstart  
 This quickstart is designed to allow you to push themes, plugins, and WordPress upgrades to your OpenShift gear using git.  Please note that this is a one way relationship.  If you install any themes or plugins on your OpenShift WordPress site, the next time you do a git push they will be gone.  All theme & plugin installations, and WordPress core upgrades should be done on your local development environment.  Then do a git add, git commit, and git push to move the changes to your OpenShift gear.  This quickstart is geared towards developers, only use it if you know what you are doing!!!!
 
-Designed to have wordpress be installed in the subdirectory `/blog`
+Designed to have wordpress be installed in the subdirectory `/blog`. Useful for apps intending to be a complete website and not just a blog.
 You can change the subdirectory by renaming the blog folder and the sub_dir variable in each of the action hook scripts `(.openshift/action_hooks/*)` to something else.
 
 #### Installation on your OpenShift gear  
 Use the following command to launch an instance of this quickstart on OpenShift
 
-	rhc app create home php-5.4 mysql-5.5 --from-code=https://github.com/mstubinis/openshift-wordpress-developer-quickstart.git
+	rhc app create blog php-5.4 mysql-5.5 --from-code=https://github.com/mstubinis/openshift-wordpress-developer-quickstart.git
 	
 Once your gear is finished being created, you will need to visit your app-domain.rhcloud.com address and finish setting up your WordPress site.  If you would prefer, you an also use php-5.3 and/or mysql-5.1 instead of what is listed in the above command.  
 
